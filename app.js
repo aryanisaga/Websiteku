@@ -29,7 +29,7 @@ app.get("/subscribe.html", function(req, res) {
   res.sendFile(__dirname + "/subscribe.html");
 });
 
-app.post("/subscribe.html", function(req, res) {
+app.post("/subscribe", function(req, res) {
   const firstName = req.body.fName;
   const lastName = req.body.lName;
   const email = req.body.email;
@@ -54,7 +54,7 @@ app.post("/subscribe.html", function(req, res) {
 
   const options = {
     method: "POST",
-    auth: "saga:5829adbbd8f214a08e224ebbdb47dc19-us1"
+    auth: "saga:c309150401b81ac05e1ac6a83e75241d-us1"
   }
 
   const request = https.request(url, options, function(response) {
